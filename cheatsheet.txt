@@ -74,3 +74,15 @@ docker run -d -p 8080:80 nginx
 - Get the ID of the nginx container
 - Stop the running nginx container
 - Remove the stopped nginx container
+
+**************************************************
+*** 02-06 Solution: Managing Docker Containers ***
+**************************************************
+
+docker run -d -p 8080:80 nginx
+
+docker ps
+
+docker stop <container id>
+
+docker rm <container id>
