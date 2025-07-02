@@ -136,3 +136,13 @@ docker login
 docker push [username]/docker-demo:v1
 
 docker pull [username]/docker-demo:v1
+
+************************************************
+*** 03-06 Challenge: Building a Custom Image ***
+************************************************
+
+- Build the docker-demo image and tag it as:
+  [username]/docker-demo:v2
+- Push the image you just built to Docker Hub
+- Remove v1 of the [username]/docker-demo image
+- Pull v1 of the image from Docker Hub
