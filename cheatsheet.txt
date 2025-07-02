@@ -86,3 +86,15 @@ docker ps
 docker stop <container id>
 
 docker rm <container id>
+
+***********************************************
+*** 03-01 Finding and Pulling Docker Images ***
+***********************************************
+
+https://hub.docker.com
+
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html
+
+https://learn.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli
+
+https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling
