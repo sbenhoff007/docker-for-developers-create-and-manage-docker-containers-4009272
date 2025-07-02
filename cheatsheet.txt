@@ -65,3 +65,12 @@ docker rm <container name or id>
 docker container prune
 
 docker run -d -p 8080:80 nginx
+
+***************************************************
+*** 02-05 Challenge: Managing Docker Containers ***
+***************************************************
+
+- Run the nginx Docker container
+- Get the ID of the nginx container
+- Stop the running nginx container
+- Remove the stopped nginx container
