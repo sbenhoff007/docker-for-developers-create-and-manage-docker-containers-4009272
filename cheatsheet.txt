@@ -98,3 +98,15 @@ https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.htm
 https://learn.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli
 
 https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling
+
+********************************************
+*** 03-03 Using the Docker Build Command ***
+********************************************
+
+docker build -t docker-demo .
+
+docker build --no-cache -t docker-demo .
+
+docker run -p 3000:3000 docker-demo
+
+http://localhost:3000
