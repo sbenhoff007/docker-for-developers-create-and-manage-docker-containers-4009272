@@ -11,3 +11,21 @@ https://www.docker.com/products/docker-desktop/
 docker pull hello-world
 
 docker run hello-world
+
+***************************************
+*** 02-01 Using Docker CLI Commands ***
+***************************************
+
+docker run -d -p 8080:80 nginx
+
+docker ps
+
+docker ps -a
+
+docker stop <container id>
+
+docker stop <container name>
+
+docker start <container id or name>
+
+docker exec -it <container id or name> sh
