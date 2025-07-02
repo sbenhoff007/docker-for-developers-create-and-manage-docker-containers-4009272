@@ -29,3 +29,15 @@ docker stop <container name>
 docker start <container id or name>
 
 docker exec -it <container id or name> sh
+
+***********************************
+*** 02-02 Inspecting Containers ***
+***********************************
+
+docker run -d -p 8080:80 nginx
+
+docker ps
+
+docker inspect <container id or name>
+
+docker inspect --format='{{.Config.Env}}' <container id or name>
