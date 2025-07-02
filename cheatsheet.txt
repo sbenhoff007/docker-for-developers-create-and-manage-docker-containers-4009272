@@ -146,3 +146,15 @@ docker pull [username]/docker-demo:v1
 - Push the image you just built to Docker Hub
 - Remove v1 of the [username]/docker-demo image
 - Pull v1 of the image from Docker Hub
+
+***********************************************
+*** 03-06 Solution: Building a Custom Image ***
+***********************************************
+
+docker build -t [username]/docker-demo:v2 .
+
+docker push [username]/docker-demo:v2
+
+docker image rm [username]/docker-demo:v1
+
+docker pull [username]/docker-demo:v1
