@@ -41,3 +41,13 @@ docker ps
 docker inspect <container id or name>
 
 docker inspect --format='{{.Config.Env}}' <container id or name>
+
+************************************
+*** 02-03 Viewing Container Logs ***
+************************************
+
+docker ps
+
+docker logs <container id or name>
+
+docker logs -f <container id or name>
