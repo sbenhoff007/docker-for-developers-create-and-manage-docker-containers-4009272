@@ -120,3 +120,19 @@ docker images
 docker inspect docker-demo:latest
 
 docker image rm docker-demo
+
+********************************************
+*** 03-05 Working With an Image Registry ***
+********************************************
+
+https://hub.docker.com
+
+docker tag docker-demo:latest [username]/docker-demo:v1
+
+docker build -t [username]/docker-demo:v1 .
+
+docker login
+
+docker push [username]/docker-demo:v1
+
+docker pull [username]/docker-demo:v1
