@@ -110,3 +110,13 @@ docker build --no-cache -t docker-demo .
 docker run -p 3000:3000 docker-demo
 
 http://localhost:3000
+
+******************************************************
+*** 03-04 Listing, Inspecting, and Removing Images ***
+******************************************************
+
+docker images
+
+docker inspect docker-demo:latest
+
+docker image rm docker-demo
