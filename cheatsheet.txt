@@ -158,3 +158,17 @@ docker push [username]/docker-demo:v2
 docker image rm [username]/docker-demo:v1
 
 docker pull [username]/docker-demo:v1
+
+***************************************************
+*** 04-03 Running a Multi-Container Application ***
+***************************************************
+
+docker compose up
+
+http://localhost:3000
+
+docker compose up --build
+
+docker compose up db
+
+docker compose up --build --force-recreate
