@@ -3,3 +3,11 @@
 ***************************************
 
 https://www.docker.com/products/docker-desktop/
+
+******************************************
+*** 01-05 Running Your First Container ***
+******************************************
+
+docker pull hello-world
+
+docker run hello-world
