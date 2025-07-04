@@ -196,3 +196,12 @@ docker compose up
 docker compose down db
 
 docker compose down
+
+**************************************************************
+*** 04-05 Challenge: Running a Multi-Container Application ***
+**************************************************************
+
+- Run the app and db services using a single command
+- Stop only the db service
+- Start the db service again
+- Stop and remove both the app and db services using a single command
