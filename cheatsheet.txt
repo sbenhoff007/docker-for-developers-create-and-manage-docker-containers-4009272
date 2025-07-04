@@ -172,3 +172,27 @@ docker compose up --build
 docker compose up db
 
 docker compose up --build --force-recreate
+
+***********************************************
+*** 04-04 Using Docker Compose CLI Commands ***
+***********************************************
+
+docker compose stop
+
+docker compose stop app
+
+docker compose start
+
+docker compose start db
+
+docker compose start app
+
+docker compose down
+
+docker compose down --volumes
+
+docker compose up
+
+docker compose down db
+
+docker compose down
