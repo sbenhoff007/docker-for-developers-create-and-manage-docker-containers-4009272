@@ -306,9 +306,9 @@ docker network rm <network id>
 - Stop the containers and remove the custom network
 - Remove the pgdata volume
 
-******************************************************************
+*****************************************************************
 *** 05-06 Solution: Working with Persistent Data and Networks ***
-******************************************************************
+*****************************************************************
 
 docker compose up
 
