@@ -10,6 +10,8 @@ services:
       - DATABASE_URL=postgres://user:password@db:5432/messages
     depends_on:
       - db
+    volumes:
+      - ./app:/app
 
   db:
     image: postgres:15-alpine
