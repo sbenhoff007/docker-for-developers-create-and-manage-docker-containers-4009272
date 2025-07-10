@@ -217,3 +217,19 @@ docker stop db
 docker start db
 
 docker compose down
+
+***********************************
+*** 05-02 Using a Docker Volume ***
+***********************************
+
+docker volume create pgdata
+
+docker volume ls
+
+docker volume inspect docker-for-developers-create-and-manage-docker-containers-4009272_pgdata
+
+docker volume rm docker-for-developers-create-and-manage-docker-containers-4009272_pgdata
+
+docker volume prune
+
+docker compose down --volumes
