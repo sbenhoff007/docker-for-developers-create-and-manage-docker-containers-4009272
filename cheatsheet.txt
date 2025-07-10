@@ -296,3 +296,12 @@ docker network inspect <network id>
 docker compose down
 
 docker network rm <network id>
+
+******************************************************************
+*** 05-05 Challenge: Working with Persistent Data and Networks ***
+******************************************************************
+
+- Run the containers for both the app and db services
+- Get a list of the volumes and copy the full name of the pgdata volume
+- Stop the containers and remove the custom network
+- Remove the pgdata volume
