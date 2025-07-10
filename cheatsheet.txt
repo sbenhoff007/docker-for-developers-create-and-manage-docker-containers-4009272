@@ -243,3 +243,56 @@ volumes:
   - ./app:/app
 
 docker compose up
+
+***************************************
+*** 05-04 Creating a Custom Network ***
+***************************************
+
+# Final compose.yml file
+
+services:
+  app:
+    image: sbenhoff/docker-demo:v2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/messages
+    depends_on:
+      - db
+    volumes:
+      - ./app:/app
+    networks:
+      - appnet
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: messages
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - appnet
+
+volumes:
+  pgdata:
+
+networks:
+  appnet:
+    driver: bridge
+
+###
+
+docker compose up
+
+docker network ls
+
+docker network inspect <network id>
+
+docker compose down
+
+docker network rm <network id>
