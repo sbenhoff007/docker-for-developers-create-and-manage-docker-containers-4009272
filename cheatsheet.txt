@@ -207,7 +207,7 @@ docker compose down
 - Stop and remove both the app and db services using a single command
 
 *************************************************************
-*** 04-05 Solution: Running a Multi-Container Application ***
+*** 04-06 Solution: Running a Multi-Container Application ***
 *************************************************************
 
 docker compose up
