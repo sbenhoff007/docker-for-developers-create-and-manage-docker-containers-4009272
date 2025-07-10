@@ -233,3 +233,13 @@ docker volume rm docker-for-developers-create-and-manage-docker-containers-40092
 docker volume prune
 
 docker compose down --volumes
+
+********************************
+*** 05-03 Using a Bind Mount ***
+********************************
+
+# Add to compose.yml on line 13-14
+volumes:
+  - ./app:/app
+
+docker compose up
