@@ -319,3 +319,9 @@ docker compose down
 docker volume rm docker-for-developers-create-and-manage-docker-containers-4009272_pgdata
 
 docker compose down --volumes
+
+**********************************
+*** 06-02 Initializing a Swarm ***
+**********************************
+
+docker swarm init
