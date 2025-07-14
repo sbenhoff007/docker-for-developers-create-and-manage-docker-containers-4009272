@@ -335,3 +335,25 @@ docker swarm join-token worker
 docker swarm join-token manager
 
 docker node ls
+
+******************************************
+*** 06-04 Deploy and Inspect a Service ***
+******************************************
+
+docker stack deploy -c compose.yml myapp
+
+docker service ls
+
+docker service ps myapp_app
+
+docker service scale myapp_app=5
+
+docker service ps myapp_app
+
+docker stack rm myapp
+
+docker stack ls
+
+docker swarm leave
+
+docker swarm leave --force
