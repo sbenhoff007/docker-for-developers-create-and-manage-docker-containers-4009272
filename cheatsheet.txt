@@ -367,3 +367,15 @@ docker swarm leave --force
 - Verify the app is working by navigating to localhost:3000
 - Remove the webapp stack
 - Leave Swarm mode
+
+****************************************
+*** 06-06 Solution: Using Swarm Mode ***
+****************************************
+
+docker swarm init
+
+docker stack deploy -c compose.yml webapp
+
+docker stack rm webapp
+
+docker swarm leave --force
