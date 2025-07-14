@@ -325,3 +325,13 @@ docker compose down --volumes
 **********************************
 
 docker swarm init
+
+***************************************
+*** 06-03 Adding Nodes to the Swarm ***
+***************************************
+
+docker swarm join-token worker
+
+docker swarm join-token manager
+
+docker node ls
