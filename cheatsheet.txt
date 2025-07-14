@@ -357,3 +357,13 @@ docker stack ls
 docker swarm leave
 
 docker swarm leave --force
+
+*****************************************
+*** 06-05 Challenge: Using Swarm Mode ***
+*****************************************
+
+- Initialize Swarm mode
+- Deploy the stack for our existing web app and name it webapp
+- Verify the app is working by navigating to localhost:3000
+- Remove the webapp stack
+- Leave Swarm mode
