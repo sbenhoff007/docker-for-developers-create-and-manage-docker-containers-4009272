@@ -391,3 +391,21 @@ https://minikube.sigs.k8s.io/docs/start/
 minikube start
 
 minikube dashboard
+
+********************************************************************
+*** 07-03 Translating Docker Compose to Kubernetes Using Kompose ***
+********************************************************************
+
+https://kompose.io/installation/
+
+kompose version
+
+cd k8s
+
+kompose convert
+
+# Create k8s/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: myapp
