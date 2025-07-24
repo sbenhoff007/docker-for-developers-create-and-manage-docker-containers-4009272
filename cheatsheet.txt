@@ -471,3 +471,21 @@ kubectl get pods -n myapp
 kubectl logs [pod id] -n myapp
 
 minikube service app --url -n myapp
+
+*****************************************************************
+*** 07-08 Removing Kubernetes Resources and Stopping Minikube ***
+*****************************************************************
+
+kubectl delete service app -n myapp
+
+kubectl delete deployment app -n myapp
+
+kubectl delete namespace myapp
+
+minikube dashboard
+
+minikube stop
+
+minikube start
+
+minikube delete
