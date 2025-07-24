@@ -441,3 +441,17 @@ kubectl get pods -n myapp
 kubectl apply -f k8s/app-deployment.yaml
 
 kubectl get pods -n myapp
+
+************************************************
+*** 07-06 Challenge: Working With Kubernetes *** 
+************************************************
+
+- Rebuild your Docker image. Tag it with version 4 and use the no-cache option.
+- Push the image to your repository on Docker Hub.
+- Update the app deployment YAML file to: 
+  - Use the new image
+  - Set the replicas to 3
+- Apply the changes to the app deployment file.
+- Get a list of the pods available in the myapp namespace and copy the ID of the first pod available.
+- View the logs for the pod with the ID you just copied.
+- Extra Credit: Get the URL of the app and navigate to it to ensure the app is working correctly.
