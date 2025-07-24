@@ -429,3 +429,15 @@ minikube service app --url -n myapp
 kubectl get pods -n myapp
 
 kubectl logs [pod id] -n myapp
+
+***********************************
+*** 07-05 Scaling in Kubernetes ***
+***********************************
+
+kubectl scale deployment app --replicas=3 -n myapp
+
+kubectl get pods -n myapp
+
+kubectl apply -f k8s/app-deployment.yaml
+
+kubectl get pods -n myapp
