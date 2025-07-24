@@ -379,3 +379,15 @@ docker stack deploy -c compose.yml webapp
 docker stack rm webapp
 
 docker swarm leave --force
+
+*********************************************
+*** 07-02 Installing Kubectl and Minikube ***
+*********************************************
+
+https://kubernetes.io/docs/tasks/tools/
+
+https://minikube.sigs.k8s.io/docs/start/
+
+minikube start
+
+minikube dashboard
