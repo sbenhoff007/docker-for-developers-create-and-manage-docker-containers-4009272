@@ -455,3 +455,19 @@ kubectl get pods -n myapp
 - Get a list of the pods available in the myapp namespace and copy the ID of the first pod available.
 - View the logs for the pod with the ID you just copied.
 - Extra Credit: Get the URL of the app and navigate to it to ensure the app is working correctly.
+
+***********************************************
+*** 07-07 Solution: Working With Kubernetes *** 
+***********************************************
+
+docker build -t [username]/docker-demo:v4 --no-cache .
+
+docker push [username]/docker-demo:v4
+
+kubectl apply -f k8s/app-deployment.yaml
+
+kubectl get pods -n myapp
+
+kubectl logs [pod id] -n myapp
+
+minikube service app --url -n myapp
