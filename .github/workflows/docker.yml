@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourusername/your-image-name:latest
+          tags: sbenhoff/docker-demo:v5
