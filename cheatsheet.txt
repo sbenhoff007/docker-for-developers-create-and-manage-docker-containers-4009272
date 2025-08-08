@@ -409,3 +409,167 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: myapp
+
+********************************************
+*** 07-04 Deploying a Sample Application ***
+********************************************
+
+docker build -t [username]/docker-demo:v3 --no-cache .
+
+docker push [username]/docker-demo:v3
+
+kubectl apply -f k8s/namespace.yaml
+
+kubectl apply -f k8s/
+
+minikube dashboard
+
+minikube service app --url -n myapp
+
+kubectl get pods -n myapp
+
+kubectl logs [pod id] -n myapp
+
+***********************************
+*** 07-05 Scaling in Kubernetes ***
+***********************************
+
+kubectl scale deployment app --replicas=3 -n myapp
+
+kubectl get pods -n myapp
+
+kubectl apply -f k8s/app-deployment.yaml
+
+kubectl get pods -n myapp
+
+************************************************
+*** 07-06 Challenge: Working With Kubernetes *** 
+************************************************
+
+- Rebuild your Docker image. Tag it with version 4 and use the no-cache option.
+- Push the image to your repository on Docker Hub.
+- Update the app deployment YAML file to: 
+  - Use the new image
+  - Set the replicas to 3
+- Apply the changes to the app deployment file.
+- Get a list of the pods available in the myapp namespace and copy the ID of the first pod available.
+- View the logs for the pod with the ID you just copied.
+- Extra Credit: Get the URL of the app and navigate to it to ensure the app is working correctly.
+
+***********************************************
+*** 07-07 Solution: Working With Kubernetes *** 
+***********************************************
+
+docker build -t [username]/docker-demo:v4 --no-cache .
+
+docker push [username]/docker-demo:v4
+
+kubectl apply -f k8s/app-deployment.yaml
+
+kubectl get pods -n myapp
+
+kubectl logs [pod id] -n myapp
+
+minikube service app --url -n myapp
+
+*****************************************************************
+*** 07-08 Removing Kubernetes Resources and Stopping Minikube ***
+*****************************************************************
+
+kubectl delete service app -n myapp
+
+kubectl delete deployment app -n myapp
+
+kubectl delete namespace myapp
+
+minikube dashboard
+
+minikube stop
+
+minikube start
+
+minikube delete
+
+**************************************
+*** 08-02 Adding a GitHub Workflow ***
+**************************************
+
+## Create /.github/workflows/docker.yml
+
+name: Build and Push Docker Image
+
+on:
+  pull_request:
+    branches:
+      - main  # Trigger on pull request to main branch
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: [username]/docker-demo:v5
+
+*******************************************************
+*** 08-05 Challenge: Implementing a GitHub Workflow ***
+*******************************************************
+
+- Use the 08-05 code branch
+- Create docker.yml in the GitHub workflows folder
+- Copy and paste the code from cheatsheet
+  Update the Docker workflow file to make it work with your own Docker credentials
+  Note that this time, we are tagging the image as version 6
+- Commit and push your work
+  Create a pull request and use the main branch in your fork as the base
+- View the workflow run as a part of the pull request process
+- Verify that version 6 of the image has been pushed in Docker Hub
+
+## Create /.github/workflows/docker.yml
+
+name: Build and Push Docker Image
+
+on:
+  pull_request:
+    branches:
+      - main  # Trigger on pull request to main branch
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: [username]/docker-demo:v6
