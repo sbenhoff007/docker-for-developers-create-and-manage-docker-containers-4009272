@@ -12,6 +12,7 @@ services:
       - db
     volumes:
       - ./app:/app
+    command: sh -c "npm install && npm start"
     # networks:
     #   - appnet
 
