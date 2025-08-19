@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: sbenhoff/docker-demo:v5
+          tags: sbenhoff/docker-demo:v6
