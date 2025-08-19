@@ -573,4 +573,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: [username]/docker-demo:v5
+          tags: [username]/docker-demo:v6
